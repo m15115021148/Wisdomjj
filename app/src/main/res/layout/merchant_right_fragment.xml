@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 实时推荐 -->
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/Merchant_tv_style"
+                android:text="@string/merchant_real_time_recommend" />
+
+            <com.sitemap.wisdomjingjiang.views.MyGridView
+                android:id="@+id/gridView1"
+                style="@style/Merchant_gridview_style" >
+            </com.sitemap.wisdomjingjiang.views.MyGridView>
+
+            <!-- 精品男装 -->
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/Merchant_tv_style"
+                android:text="@string/merchant_jing_pin_men" />
+
+            <com.sitemap.wisdomjingjiang.views.MyGridView
+                android:id="@+id/gridView2"
+                style="@style/Merchant_gridview_style" >
+            </com.sitemap.wisdomjingjiang.views.MyGridView>
+
+            <!-- 数码电脑 -->
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/Merchant_tv_style"
+                android:text="@string/merchant_figure_computer" />
+
+            <com.sitemap.wisdomjingjiang.views.MyGridView
+                android:id="@+id/gridView3"
+                style="@style/Merchant_gridview_style" >
+            </com.sitemap.wisdomjingjiang.views.MyGridView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

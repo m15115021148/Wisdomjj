@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+         android:id="@+id/titleID"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:background="@color/home_pager_title"
+        android:paddingLeft="@dimen/_20px_in720p"
+        android:paddingRight="@dimen/_20px_in720p" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/_70px_in720p"
+            android:layout_height="@dimen/_70px_in720p"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/_1px_in720p"
+            android:paddingRight="@dimen/_40px_in720p"
+            android:paddingTop="@dimen/_20px_in720p"
+            android:paddingBottom="@dimen/_20px_in720p"
+            android:src="@drawable/back_img" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="详情"
+            android:layout_marginLeft="@dimen/_70px_in720p"
+            android:layout_marginRight="@dimen/_40px_in720p"
+            android:maxLines="1"            
+            android:singleLine="true"
+android:ellipsize="end"
+            android:textColor="@color/texthei"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="@dimen/_40px_in720p"
+            android:layout_height="@dimen/_40px_in720p"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:src="@drawable/foods_share" />
+        
+         <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="保存"
+            android:visibility ="gone"
+            android:textColor="@color/texthei"
+            android:textSize="@dimen/_36px_in720p" />
+
+    </RelativeLayout>
+
+</LinearLayout>

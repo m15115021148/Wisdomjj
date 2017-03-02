@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".KTVActivity" >
+
+    <include
+        android:id="@+id/ktv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar" />
+
+    <com.sitemap.wisdomjingjiang.views.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.sitemap.wisdomjingjiang.views.PullableListView
+            android:id="@+id/ktv_listview"
+            android:scrollbars="none"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <include layout="@layout/load_more" />
+    </com.sitemap.wisdomjingjiang.views.PullToRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_400px_in720p"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+     >
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/shopping_img"
+        android:layout_width="@dimen/_400px_in720p"
+        android:layout_height="@dimen/_250px_in720p"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        />
+    
+    <TextView
+        android:id="@+id/shopping_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/shopping_img"
+        android:layout_below="@+id/shopping_img"
+        android:layout_marginTop="@dimen/_10px_in720p"
+        android:text="水瓶"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/text"
+        android:textSize="@dimen/_27px_in720p" />
+    
+
+    <RelativeLayout
+        android:layout_alignLeft="@+id/shopping_img"
+        android:layout_below="@+id/shopping_desc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90px_in720p" >
+
+        <TextView
+            android:id="@+id/shopping_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/shopping_more"
+            android:layout_marginBottom="@dimen/_40px_in720p"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="上海"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_27px_in720p" />
+
+        <TextView
+            android:id="@+id/shopping_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/shopping_money"
+            android:layout_toRightOf="@+id/shopping_money"
+            android:gravity="center|right"
+            android:text="月销售:20"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_27px_in720p" />
+
+        <TextView
+            android:id="@+id/shopping_money"
+            android:layout_width="@dimen/_160px_in720p"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="￥122"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_27px_in720p" />
+    </RelativeLayout>
+
+    
+</RelativeLayout>

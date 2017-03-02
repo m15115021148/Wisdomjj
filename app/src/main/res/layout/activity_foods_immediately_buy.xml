@@ -1,0 +1,519 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".FoodsImmediatelyBuyActivity" >
+
+    <include
+        android:id="@+id/foods_buy_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_110px_in720p"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- viewpager 团购详情 图片显示页面 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_350px_in720p" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/foods_buy_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </android.support.v4.view.ViewPager>
+
+                    <LinearLayout
+                        android:id="@+id/foods_buy_indictor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50px_in720p"
+                        android:layout_alignBottom="@+id/foods_buy_viewpager"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- 团购 图片 文字描述   无用 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_20px_in720p"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/foods_desc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_36px_in720p" />
+                </LinearLayout>
+
+                <!-- 团购 价格详情 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_205px_in720p"
+                    android:background="@color/white"
+                    android:padding="@dimen/_20px_in720p" >
+
+                    <!-- 价格 -->
+
+                    <RelativeLayout
+                        android:id="@+id/l1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true" >
+
+                        <TextView
+                            android:id="@+id/flag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/shopping_flag"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_27px_in720p" />
+
+                        <TextView
+                            android:id="@+id/foods_now_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_10px_in720p"
+                            android:layout_toRightOf="@+id/flag"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_36px_in720p" />
+
+                        <TextView
+                            android:id="@+id/foods_inventory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/texthui"
+                            android:textSize="@dimen/_31px_in720p" />
+                    </RelativeLayout>
+
+                    <!-- 团购详情 的地址 -->
+
+                    <RelativeLayout
+                        android:id="@+id/l3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/l1"
+                        android:layout_marginTop="@dimen/_15px_in720p"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true" >
+
+                        <TextView
+                            android:id="@+id/foods_expressage"
+                            style="@style/shopping_des_tv_style"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/shopping_money" />
+
+                        <TextView
+                            android:id="@+id/foods_old_price"
+                            style="@style/shopping_des_tv_style"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/foods_expressage"
+                            android:text="￥0.00" />
+
+                        <TextView
+                            android:id="@+id/foods_sales"
+                            style="@style/shopping_des_tv_style"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true" />
+
+                        <TextView
+                            android:id="@+id/foods_city_name"
+                            style="@style/shopping_des_tv_style"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    
+                    <!-- 有效期 -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true" >
+
+
+                        <TextView
+                            android:id="@+id/youxiaoqi"
+                            style="@style/shopping_des_tv_style"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="有效期至：永久" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_15px_in720p"
+                    android:background="@color/bghui" />
+
+                <!-- 团购 图片 文字描述 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_20px_in720p" >
+
+                    <TextView
+                        android:id="@+id/foods_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_32px_in720p" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_15px_in720p"
+                    android:background="@color/bghui" />
+
+                <!-- 团购 数量的选择 -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/_20px_in720p" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/food_desc_number"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_36px_in720p" />
+
+                    <TextView
+                        android:id="@+id/foods_reduce"
+                        style="@style/shopping_des_buy_tv_number"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/foods_number"
+                        android:background="@drawable/number_reduce" />
+
+                    <TextView
+                        android:id="@+id/foods_number"
+                        style="@style/shopping_des_buy_tv_number"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/foods_add"
+                        android:background="@drawable/number_bg"
+                        android:gravity="center"
+                        android:textColor="@color/texthei"
+                        android:textSize="@dimen/_27px_in720p" />
+
+                    <TextView
+                        android:id="@+id/foods_add"
+                        style="@style/shopping_des_buy_tv_number"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/number_add" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_15px_in720p"
+                    android:background="@color/bghui" />
+
+                <!-- 宝贝评论 -->
+
+                <TextView
+                    android:id="@+id/shopping_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="@dimen/_20px_in720p"
+                    android:text="@string/shopping_comment"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/_31px_in720p" />
+
+                <!-- 评论 详情 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_20px_in720p"
+                    android:paddingRight="@dimen/_20px_in720p" >
+
+                    <RelativeLayout
+                        android:id="@+id/comment_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10px_in720p" >
+
+                        <com.sitemap.wisdomjingjiang.views.CircleImageView
+                            android:id="@+id/user_img"
+                            android:layout_width="@dimen/_50px_in720p"
+                            android:layout_height="@dimen/_50px_in720p"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/user_comment" />
+
+                        <TextView
+                            android:id="@+id/user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_20px_in720p"
+                            android:layout_toRightOf="@+id/user_img"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/_31px_in720p" />
+
+                        <TextView
+                            android:id="@+id/user_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_20px_in720p"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/_31px_in720p" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/user_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="2"
+                        android:padding="@dimen/_20px_in720p"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_27px_in720p" />
+
+                    <!-- 没有评论时显示 -->
+
+                    <TextView
+                        android:id="@+id/comment_nono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:padding="@dimen/_20px_in720p"
+                        android:text="暂无评论"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_31px_in720p"
+                        android:visibility="gone" />
+                </LinearLayout>
+                <!-- 查看更多 评论 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20px_in720p"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/_10px_in720p"
+                    android:paddingTop="@dimen/_10px_in720p" >
+
+                    <TextView
+                        android:id="@+id/foods_comment_more"
+                        android:layout_width="@dimen/_200px_in720p"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/start_seleor"
+                        android:gravity="center"
+                        android:padding="@dimen/_10px_in720p"
+                        android:text="@string/shopping_comment_more"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_27px_in720p" />
+                </LinearLayout>
+   <!-- 团购 推荐 -->
+ 		<View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_15px_in720p"
+                    android:background="@color/bghui" />
+            <LinearLayout
+                android:id="@+id/tuijianlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/_20px_in720p" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/news_information_tv_bg"
+                    android:padding="@dimen/_10px_in720p" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="相关推荐"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_30px_in720p" />
+
+                 
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/foods_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" >
+                </ListView>
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60px_in720p" />
+            </LinearLayout>
+            
+            
+          
+        </ScrollView>
+
+        <!-- 下半部分  购物车 立即购买 等 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2px_in720p"
+                android:background="@color/bghui" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/foods_merchant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_20px_in720p" >
+
+                    <ImageView
+                        android:layout_width="@dimen/_35px_in720p"
+                        android:layout_height="@dimen/_35px_in720p"
+                        android:src="@drawable/merchant_shops" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_name"
+                        android:textColor="@color/texthui"
+                        android:textSize="@dimen/_27px_in720p" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/foods_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_20px_in720p" >
+
+                    <ImageView
+                        android:layout_width="@dimen/_35px_in720p"
+                        android:layout_height="@dimen/_35px_in720p"
+                        android:background="@drawable/collect_goods_status" />
+
+                    <TextView
+                        android:id="@+id/collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_shoucong"
+                        android:textColor="@color/texthui"
+                        android:textSize="@dimen/_27px_in720p" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/shop_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_20px_in720p" >
+
+                    <ImageView
+                        android:layout_width="@dimen/_35px_in720p"
+                        android:layout_height="@dimen/_35px_in720p"
+                        android:src="@drawable/shopping_cart_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_shopping_cart"
+                        android:textColor="@color/texthui"
+                        android:textSize="@dimen/_27px_in720p" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/add_shopping_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FD800A"
+                    android:gravity="center"
+                    android:padding="@dimen/_25px_in720p"
+                    android:text="@string/shopping_add_cart"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_31px_in720p" />
+
+                <TextView
+                    android:id="@+id/foods_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:gravity="center"
+                    android:padding="@dimen/_25px_in720p"
+                    android:text="@string/shopping_buy"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_31px_in720p" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

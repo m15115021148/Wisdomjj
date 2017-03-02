@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 是否更新dialog样式 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lan"
+        android:gravity="center"
+        android:padding="@dimen/_30px_in720p"
+        android:text="发现新版本"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_42px_in720p" />
+
+    <TextView
+        android:id="@+id/update_con"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350px_in720p"
+        android:layout_marginLeft="@dimen/_35px_in720p"
+        android:layout_marginTop="@dimen/_45px_in720p"
+        android:gravity="top"
+        android:lineSpacingExtra="@dimen/_15px_in720p"
+        android:textColor="#333333"
+        android:textSize="@dimen/_36px_in720p" />
+
+</LinearLayout>

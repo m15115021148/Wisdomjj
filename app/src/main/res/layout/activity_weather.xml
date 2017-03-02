@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/weather"
+    tools:context=".WeatherActivity" >
+
+    <include
+        android:id="@+id/weather_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar" />
+
+    <TextView
+        android:id="@+id/city_name"
+        style="@style/weather_tv_style"
+        android:layout_marginTop="@dimen/_200px_in720p"
+        android:text="靖江"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/city_des"
+        style="@style/weather_tv_style"
+        android:text="多云" />
+
+    <TextView
+        android:id="@+id/city_temperature"
+        style="@style/weather_tv_style"
+        android:text="22度" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_40px_in720p" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <include
+                android:id="@+id/weather_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                layout="@layout/include_weather_items" />
+
+            <include
+                android:id="@+id/weather_tomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                layout="@layout/include_weather_items" />
+
+            <include
+                android:id="@+id/weather_saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                layout="@layout/include_weather_items" />
+
+            <include
+                android:id="@+id/weather_sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                layout="@layout/include_weather_items" />
+
+            <include
+                android:id="@+id/weather_monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                layout="@layout/include_weather_items" />
+
+            <include
+                android:id="@+id/weather_tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                layout="@layout/include_weather_items" />
+
+            <include
+                android:id="@+id/weather_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                layout="@layout/include_weather_items" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

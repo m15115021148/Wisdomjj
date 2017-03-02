@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 收货地址页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/bghui">
+
+    <include
+        android:id="@+id/address_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/include_back_bar" />
+
+    <ListView
+        android:id="@+id/address_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/address_add"
+        android:layout_below="@+id/address_list_title"
+        android:layout_marginTop="@dimen/_20px_in720p" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/address_add"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:gravity="center"
+        android:textSize="@dimen/_36px_in720p"
+        android:text="@string/address_add"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

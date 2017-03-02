@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bghui"
+    tools:context=".WuLiuWebActivity" >
+
+   <include
+        android:id="@+id/wu_liu_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        layout="@layout/include_back_bar"
+        />
+
+    <WebView
+        android:id="@+id/wu_liu_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

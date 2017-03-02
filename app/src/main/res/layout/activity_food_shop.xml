@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bghui"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/merchant_desc_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar_two" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- viewpager 团购详情 图片显示页面 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_350px_in720p" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/foods_shop_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </android.support.v4.view.ViewPager>
+                
+                <LinearLayout
+			        android:id="@+id/foods_shop_indictor"
+			        android:gravity="center"
+			        android:orientation="horizontal"
+			        android:layout_alignBottom="@+id/foods_shop_viewpager"
+			        android:layout_width="match_parent"
+			        android:layout_height="@dimen/_50px_in720p" 
+			        >			        
+			    </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/_5px_in720p"
+                android:id="@+id/foods_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_36px_in720p"
+                android:paddingLeft="@dimen/_20px_in720p"
+                android:paddingTop="@dimen/_20px_in720p"
+                android:paddingRight="@dimen/_20px_in720p"
+                android:maxLines="2"
+                android:textColor="@color/text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="@dimen/_20px_in720p" >
+
+                <RatingBar
+                    android:id="@+id/foods_lv"
+                    style="@style/my_grade_bar_style"
+                    />
+
+                <TextView
+                    android:id="@+id/foods_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20px_in720p"
+                    android:text="4.1分"
+                    android:textColor="@color/home_pager_title"
+                    android:textSize="@dimen/_31px_in720p" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20px_in720p"
+                    android:text="人均:"
+                    android:textColor="@color/texthui"
+                    android:textSize="@dimen/_31px_in720p" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/foods_ren_jun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥23"
+                    android:textColor="@color/texthui"
+                    android:textSize="@dimen/_31px_in720p" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2px_in720p"
+                android:background="@color/bghui" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_20px_in720p" >
+
+                <LinearLayout
+                    android:id="@+id/foods_ding_wei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView                       
+                        android:layout_width="@dimen/_35px_in720p"
+                        android:layout_height="@dimen/_35px_in720p"
+                        android:src="@drawable/arraw" />
+
+                    <TextView
+                        android:textSize="@dimen/_31px_in720p"
+                        android:id="@+id/foods_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20px_in720p"
+                        android:maxLines="1"
+                        android:textColor="@color/text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/foods_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50px_in720p"
+                    android:layout_weight="4"
+                    android:gravity="center|right" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/call_phone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20px_in720p"
+                android:background="@color/bghui" />
+
+            <ListView
+                android:id="@+id/foods_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+            </ListView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20px_in720p"
+                android:background="@color/bghui" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/_20px_in720p"
+                android:text="商家简介"
+                android:textColor="@color/texthei"
+                android:textSize="@dimen/_36px_in720p" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2px_in720p"
+                android:background="@color/bghui" />
+
+            <TextView
+                android:id="@+id/foods_brief"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="@dimen/_20px_in720p"
+                android:text="开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜开封菜"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_31px_in720p" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @author chenhao -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_600px_in720p"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/_20px_in720p" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/_10px_in720p"
+        android:text="商圈"
+        android:textColor="@color/text"
+        android:textSize="@dimen/_31px_in720p" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2px_in720p"
+        android:background="@color/lighter_gray" />
+
+    <GridView
+        android:id="@+id/dialog_shops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/_10px_in720p"
+        android:layout_marginTop="@dimen/_10px_in720p"
+        android:gravity="center_vertical"
+        android:horizontalSpacing="@dimen/_10px_in720p"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:scrollbars="vertical"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/_10px_in720p" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2px_in720p"
+        android:background="@color/lighter_gray" />
+
+    <TextView
+        android:id="@+id/dialog_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/_20px_in720p"
+        android:layout_marginTop="@dimen/_10px_in720p"
+        android:text="当前城市： 靖江"
+        android:textColor="@color/texthei"
+        android:textSize="@dimen/_31px_in720p" />
+
+</LinearLayout>

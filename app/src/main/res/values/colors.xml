@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 常用 -->
+    <color name="bghui">#f4f4f4</color>
+    <color name="texthui">#bcbcbc</color>
+     <color name="texthei">#000000</color>
+      <color name="text">#333333</color>
+       <color name="light_red">#FF8247</color>
+    
+    
+    <color name="transparency">#00000000</color>
+    <color name="holo_blue">#FF33E5B5</color>
+    <color name="gallery_background">#ff111111</color>
+    <color name="gallery_alpha">#b0000000</color>
+    <color name="lighter_gray">#ffd3d3d3</color>
+    <color name="mygray">#eeeeee</color>
+    <color name="gray">#ff808080</color>
+    <color name="darkgray">#ffa9a9a9</color>
+    <color name="lightgray">#ffd3d3d3</color>
+    <color name="sandybrown">#fff4a460</color>
+    <color name="dimgray">#ff696969</color>
+    <color name="silver">#ffc0c0c0</color>
+    <color name="black">#ff000000</color>
+    <color name="red">#FF4444</color>
+    <color name="blue">#900000ff</color>
+    <color name="green">#ff00ff00</color>
+    <color name="lan">#0000ff</color>
+    <color name="hei">#858585</color>
+    <color name="moren">#020202</color>
+    <color name="huia">#eeebf4</color>
+    <color name="textcolor">#999999</color>
+    <color name="hong">#e75b5f</color>
+    <color name="page_viewer_margin_color">#cccccc</color>
+    <color name="light_blue">#6593cb</color>
+
+    <!-- 登录页面color -->
+    <color name="tilteColor">#1cace9</color>
+    <color name="white">#ffffff</color>
+    <color name="user_xian">#f3f3f3</color>
+    <color name="huise">#cccccc</color>
+    <color name="send_code">#4400ff00</color>
+
+    <!-- 用户登录相关颜色 -->
+    <color name="user_login_bottom_color">#F3F3F3</color>
+    <color name="user_login_edit_font_color">#111111</color>
+    <color name="user_login_font_color">#555555</color>
+    <!-- 首页颜色 -->
+    <color name="index_tm">#f6ffffff</color>
+    <color name="home_pager_title">#ffdb2e</color>
+  <color name="home_pager_title_light">#ffdb2e</color>
+  
+    <!-- 对话框颜色 -->
+    <color name="popupwinow_font_color_a">#E9C6C7</color>
+    <color name="popupwinow_font_color_b">#9D9D9C</color>
+
+    <!-- 地图绘制点的颜色 -->
+    <color name="map_line">#BDDDDF</color>
+
+    <!-- 充值金额黄色 -->
+    <color name="huang">#f2a31a</color>
+    <color name="lv">#6eb348</color>
+    <!-- 功能页面 -->
+    <color name="gbei">#f4f4f4</color>
+    <color name="gxian">#dddddd</color>
+    <color name="ghui">#999999</color>
+    <color name="ghei">#333333</color>
+    <color name="tab_indicator_text_selected">#ffffff</color>
+    <color name="tab_indicator_text_unselected">#aac5d7</color>
+
+</resources>

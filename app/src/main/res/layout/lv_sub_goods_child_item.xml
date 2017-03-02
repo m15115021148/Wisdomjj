@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_280px_in720p"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/order_img"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_20px_in720p"
+            android:layout_weight="2"
+            android:background="#cccccc" />
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_weight="5"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20px_in720p" >
+
+                <TextView
+                    android:id="@+id/order_shops_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:layout_marginRight="@dimen/_120px_in720p"
+                    android:text="XXXXXXXXXXXXXXXXXXXXX" />
+
+                <TextView
+                    android:id="@+id/order_number"
+                    android:layout_width="@dimen/_120px_in720p"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_20px_in720p"
+                    android:gravity="right|center_vertical"
+                    android:layout_centerVertical="true"
+                    android:text="x2" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/r1"
+                android:layout_above="@+id/r2"
+                android:layout_centerVertical="true"
+                android:id="@+id/foods_is_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/_20px_in720p"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="颜色：" />
+
+                <TextView
+                    android:id="@+id/order_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="红色" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20px_in720p"
+                    android:text="尺码：" />
+
+                <TextView
+                    android:id="@+id/order_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="XXL" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/r2"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20px_in720p" >
+
+                <TextView
+                    android:id="@+id/order_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_120px_in720p"
+                    android:text="￥188.00" />
+                
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

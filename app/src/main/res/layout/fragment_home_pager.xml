@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 第一个子页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mygray"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:background="@color/home_pager_title"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_20px_in720p"
+        android:paddingRight="@dimen/_20px_in720p" >
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="@dimen/_60px_in720p"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/city_name"
+            android:maxLines="1"
+            android:ellipsize="none"
+            android:textColor="@color/texthei" />
+
+        <ImageView
+            android:id="@+id/city_change"
+            android:layout_width="@dimen/_25px_in720p"
+            android:layout_height="@dimen/_25px_in720p"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5px_in720p"
+            android:layout_toRightOf="@+id/city_name"
+            android:src="@drawable/city_change" />
+
+        <LinearLayout
+            android:id="@+id/et_search"
+            android:layout_width="@dimen/_420px_in720p"
+            android:layout_height="@dimen/_60px_in720p"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10px_in720p"
+            android:background="@drawable/search_content_shape"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10px_in720p" >
+
+            <EditText
+                android:id="@+id/search_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bghui"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="@dimen/_10px_in720p"
+                android:hint="@string/search_title"
+                android:inputType="text"
+                android:lines="1"
+                android:textSize="@dimen/_27px_in720p" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="@dimen/_40px_in720p"
+            android:layout_height="@dimen/_40px_in720p"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/et_search"
+            android:src="@drawable/message2"/>
+        
+        <ImageView
+            android:id="@+id/iv_refresh"
+            android:layout_width="@dimen/_40px_in720p"
+            android:layout_height="@dimen/_40px_in720p"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10px_in720p"
+            android:src="@drawable/home_refresh" />
+        
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- viewpager 广告轮回滑动页面 -->
+
+            <RelativeLayout
+                android:id="@+id/tops_img_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_350px_in720p" >
+
+                  <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </android.support.v4.view.ViewPager>
+			    <LinearLayout
+			        android:id="@+id/indictor_view"
+			        android:gravity="center"
+			        android:orientation="horizontal"
+			        android:layout_alignBottom="@+id/viewpager"
+			        android:layout_width="match_parent"
+			        android:layout_height="@dimen/_50px_in720p" 
+			        >			        
+			    </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- 资讯 gridview -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_280px_in720p"
+                android:layout_marginTop="@dimen/_20px_in720p"
+                android:background="@color/white"
+                android:padding="@dimen/_5px_in720p" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                
+                <LinearLayout
+                    android:gravity="center"
+			        android:orientation="horizontal"
+			        android:id="@+id/indictor_grid_view"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+			        android:layout_height="@dimen/_50px_in720p" 
+			        >			        
+			    </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- 附近商圈 天气 签到 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_330px_in720p"
+                android:layout_marginTop="@dimen/_20px_in720p"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10px_in720p" >
+
+                <!-- 附近商家 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60px_in720p"
+                        android:padding="@dimen/_10px_in720p" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_10px_in720p"
+                            android:text="@string/nearby_shopping"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_30px_in720p" />
+
+                        <TextView
+                            android:id="@+id/shopping_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/more"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_25px_in720p" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/nearby_shopping_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_10px_in720p"
+                        android:src="@drawable/nearby_bg" />
+                </LinearLayout>
+
+                <!-- 天气 积分签到 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_10px_in720p"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <!-- 天气页面 -->
+
+                    <RelativeLayout
+                        android:id="@+id/weather_click"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true" >
+
+                            <TextView
+                                android:id="@+id/weather_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_20px_in720p"
+                                android:text="21°"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/_70px_in720p" />
+
+                            <ImageView
+                                android:id="@+id/weather_img"
+                                android:layout_width="@dimen/_70px_in720p"
+                                android:layout_height="@dimen/_70px_in720p"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_20px_in720p"
+                                android:src="@drawable/weather_icon" />
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:layout_width="@dimen/_150px_in720p"
+                            android:layout_height="@dimen/_150px_in720p"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_40px_in720p"
+                            android:src="@drawable/weather_bg" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="@dimen/_10px_in720p" >
+
+                            <TextView
+                                android:id="@+id/weather_fanwei"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/_20px_in720p"
+                                android:text="10℃-15℃"
+                                android:textColor="@color/text"
+                                android:textSize="@dimen/_25px_in720p" />
+
+                            <TextView
+                                android:id="@+id/weather_info"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_20px_in720p"
+                                android:text="晴转多云"
+                                android:textColor="@color/text"
+                                android:textSize="@dimen/_25px_in720p" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_3px_in720p"
+                        android:background="@color/texthui" />
+
+                    <!-- 每日签到 -->
+
+                    <LinearLayout
+                        android:id="@+id/qian_dao"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/sign"
+                            android:textSize="@dimen/_40px_in720p" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 最新资讯 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20px_in720p"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/_20px_in720p" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/news_information_tv_bg"
+                    android:padding="@dimen/_10px_in720p" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/news_information"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_30px_in720p" />
+
+                    <TextView
+                        android:id="@+id/news_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/more"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_25px_in720p" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/news_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" >
+                </ListView>
+            </LinearLayout>
+
+            <!-- 团购 推荐 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20px_in720p"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/_20px_in720p" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/news_information_tv_bg"
+                    android:padding="@dimen/_10px_in720p" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/foods_recommend_tilte"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_30px_in720p" />
+
+                    <TextView
+                        android:id="@+id/food_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/more"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_25px_in720p" />
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/foods_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

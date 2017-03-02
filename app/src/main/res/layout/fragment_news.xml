@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 第一个子页面 -->
+<com.sitemap.wisdomjingjiang.views.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/refresh_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+       <include layout="@layout/refresh_head" />
+<!-- 
+       <ListView
+     android:id="@+id/news_list"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/_20px_in720p"
+     android:layout_marginRight="@dimen/_20px_in720p"
+     ></ListView>-->
+ 
+   <com.sitemap.wisdomjingjiang.views.PullableListView
+        android:id="@+id/news_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+     /> 
+         <include layout="@layout/load_more" />
+</com.sitemap.wisdomjingjiang.views.PullToRefreshLayout>

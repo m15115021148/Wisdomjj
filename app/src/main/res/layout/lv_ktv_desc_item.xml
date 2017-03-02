@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:padding="@dimen/_20px_in720p">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"            
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ktv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10px_in720p"
+                android:textSize="@dimen/_35px_in720p"
+                android:textColor="@color/black"
+                android:text="08:00-18点任唱5小时" />
+
+            <TextView
+                android:id="@+id/ktv_week"
+                android:padding="@dimen/_10px_in720p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_31px_in720p"
+                android:text="周一至周四" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ktv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_40px_in720p"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="¥188" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bghui"
+    android:orientation="vertical"
+    tools:context=".AboutActivity" >
+
+    <include
+        android:id="@+id/about_tilte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/include_back_bar" />
+
+    <TextView
+        android:id="@+id/about_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_tilte"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_130px_in720p"
+        android:text="@string/app_name"
+        android:textColor="@color/text"
+        android:textSize="@dimen/_40px_in720p" />
+
+    <ImageView
+        android:id="@+id/about_img"
+        android:layout_width="@dimen/_160px_in720p"
+        android:layout_height="@dimen/_160px_in720p"
+        android:layout_below="@+id/about_name"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_10px_in720p"
+        android:src="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/about_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_img"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_10px_in720p"
+        android:text="V1.1.1"
+        android:textColor="@color/text"
+        android:textSize="@dimen/_32px_in720p" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/_130px_in720p"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10px_in720p"
+            android:text="泰州国通网络科技有限公司"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" />
+        
+        <TextView
+            android:id="@+id/about_call_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10px_in720p"
+            android:text="客服电话：180-5263-3456"
+            android:textColor="@color/lan"
+            android:textSize="@dimen/_36px_in720p" />
+<!--         
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10px_in720p"
+            android:text="网址：www。com。bai"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" /> -->
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10px_in720p"
+            android:text="客服QQ：18052633456"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" />
+        
+    </LinearLayout>
+
+</RelativeLayout>

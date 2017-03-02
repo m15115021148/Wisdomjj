@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_220px_in720p"
+        android:padding="@dimen/_20px_in720p" >
+
+        <ImageView
+            android:id="@+id/order_img"
+            android:layout_width="@dimen/_200px_in720p"
+        	android:layout_height="@dimen/_160px_in720p"
+            />
+
+        <TextView
+            android:id="@+id/order_shops_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="@+id/order_img"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toLeftOf="@+id/order_number"
+            android:layout_toRightOf="@+id/order_img"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="午市团购卷"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <TextView
+            android:layout_alignParentTop="@+id/order_img"
+            android:id="@+id/order_number"
+            android:layout_width="@dimen/_100px_in720p"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right"
+            android:text="X2"
+            android:textColor="@color/texthui"
+            android:textSize="@dimen/_31px_in720p"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/order_refund"
+            android:layout_width="@dimen/_150px_in720p"
+            android:layout_height="@dimen/_50px_in720p"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bt_2"
+            android:text="退款"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_30px_in720p"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/order_is_use"
+            android:layout_width="@dimen/_130px_in720p"
+            android:layout_height="@dimen/_130px_in720p"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_160px_in720p"
+            android:layout_toRightOf="@+id/order_img"
+            android:background="@drawable/order_user"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/order_price"
+            android:layout_width="@dimen/_230px_in720p"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/order_img"
+            android:layout_alignLeft="@+id/order_shops_name"
+            android:gravity="left|center_vertical"
+            android:text="￥44.00"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="@dimen/_150px_in720p"
+            android:layout_height="@dimen/_50px_in720p"
+            android:layout_alignBottom="@+id/order_price"
+            android:layout_toRightOf="@+id/order_price"
+            android:background="@drawable/bt_1"
+            android:gravity="center"
+            android:text="已退款"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_27px_in720p"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/order_delete"
+            android:layout_width="@dimen/_45px_in720p"
+            android:layout_height="@dimen/_50px_in720p"
+            android:layout_alignBottom="@+id/order_price"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/order_shop_desc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"        
+        >
+        
+        <TextView
+            android:id="@+id/order_total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:gravity="right"
+            android:textColor="@color/texthui"
+            android:textSize="@dimen/_30px_in720p" />
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2px_in720p"
+            android:background="@color/bghui" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/order_is_show"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:visibility="visible" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2px_in720p"
+            android:background="@color/bghui" />
+
+        <TextView
+            android:id="@+id/order_comment"
+            android:layout_width="@dimen/_150px_in720p"
+            android:layout_height="@dimen/_60px_in720p"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:background="@drawable/bt_2"
+            android:gravity="center"
+            android:text="去评价"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_34px_in720p" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/order_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20px_in720p"
+        android:background="@color/bghui" />
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_10px_in720p"
+        android:paddingTop="@dimen/_10px_in720p" >
+
+        <ImageView
+            android:id="@+id/foods_icon"
+            android:layout_width="@dimen/_200px_in720p"
+            android:layout_height="@dimen/_160px_in720p"
+            android:layout_alignParentLeft="true"
+             />
+
+        <TextView
+            android:id="@+id/foods_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/foods_icon"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/foods_icon"
+            android:lines="1"
+            android:text="首尔焖鲜汇(桂林路店)"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_31px_in720p" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/l1"
+            android:layout_below="@+id/foods_store"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/foods_icon"
+            android:gravity="center_vertical"
+            
+            android:orientation="horizontal" >
+            <TextView 
+                android:id="@+id/tuijian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/texthui"
+                android:singleLine="true"
+				android:ellipsize="end"
+				android:layout_marginRight="@dimen/_20px_in720p"
+                android:textSize="@dimen/_27px_in720p"
+                />
+
+            <RatingBar
+                android:id="@+id/foods_lv"
+                android:visibility="gone"
+                style="@style/my_grade_bar_style" />
+
+            <TextView
+                android:id="@+id/foods_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20px_in720p"
+                android:text="4.1分"
+                android:visibility="gone"
+                android:textColor="@color/home_pager_title"
+                android:textSize="@dimen/_27px_in720p" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/foods_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/foods_icon" >
+
+            <TextView
+                android:id="@+id/foods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:text="蛋糕"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_27px_in720p" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/foods_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20px_in720p"
+                android:layout_toLeftOf="@+id/foods_distance"
+                android:singleLine="true"
+                android:text="人民广场"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_27px_in720p" />
+
+            <TextView
+                android:id="@+id/foods_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:singleLine="true"
+                android:text="1.7km"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_27px_in720p" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

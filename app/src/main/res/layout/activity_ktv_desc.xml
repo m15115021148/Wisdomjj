@@ -1,0 +1,218 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mygray"
+    android:orientation="vertical"
+    tools:context=".KTVDescActivity" >
+
+    <include
+        android:id="@+id/ktv_desc_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar_two" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- viewpager ktv详情 图片显示页面 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_350px_in720p" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/ktv_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                </android.support.v4.view.ViewPager>
+                
+                <LinearLayout
+			        android:id="@+id/ktv_indictor"
+			        android:gravity="center"
+			        android:orientation="horizontal"
+			        android:layout_alignBottom="@+id/ktv_viewpager"
+			        android:layout_width="match_parent"
+			        android:layout_height="@dimen/_50px_in720p" 
+			        >			        
+			    </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 评分 等级 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20px_in720p"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/_20px_in720p" >
+
+                <TextView
+                    android:id="@+id/ktv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="云乐蒂"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_36px_in720p" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <RatingBar
+                        android:id="@+id/ktv_lv"
+                        style="@style/my_grade_bar_style"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/ktv_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20px_in720p"
+                        android:text="4.1分"
+                        android:visibility="gone"
+                        android:textColor="@color/home_pager_title"
+                        android:textSize="@dimen/_31px_in720p" />
+                    <TextView 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人均消费："
+                        android:textSize="@dimen/_27px_in720p"
+                        />
+                    <TextView 
+                        android:id="@+id/ktv_preMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20px_in720p"
+                        android:text="0元"
+                        android:textSize="@dimen/_27px_in720p"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 地址  电话 -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2px_in720p"
+                android:background="@color/bghui" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_20px_in720p" >
+
+                <LinearLayout
+                    android:id="@+id/foods_ding_wei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/_35px_in720p"
+                        android:layout_height="@dimen/_35px_in720p"
+                        android:src="@drawable/arraw" />
+
+                    <TextView
+                        android:id="@+id/ktv_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_20px_in720p"
+                        android:maxLines="1"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_31px_in720p" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ktv_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50px_in720p"
+                    android:layout_weight="4"
+                    android:gravity="center|right" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/call_phone" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- ktv 团购信息 -->
+
+            <TextView
+                android:id="@+id/ktv_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20px_in720p"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_20px_in720p"
+                android:text="@string/ktv_shoping_message"
+                android:textSize="@dimen/_36px_in720p" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_10px_in720p"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/_20px_in720p" >
+
+                <ListView
+                    android:id="@+id/ktv_desc_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none" >
+                </ListView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20px_in720p"
+                android:background="@color/bghui" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/_20px_in720p"
+                android:text="酒店简介"
+                android:textColor="@color/texthei"
+                android:textSize="@dimen/_36px_in720p" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2px_in720p"
+                android:background="@color/bghui" />
+
+            <TextView
+                android:id="@+id/ktv_brief"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="@dimen/_20px_in720p"
+                android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_31px_in720p" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

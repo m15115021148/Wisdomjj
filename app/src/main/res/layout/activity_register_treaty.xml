@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bghui"
+    android:orientation="vertical"
+    tools:context=".RegisterTreatyActivity" >
+
+    <!-- 标题栏 -->
+
+    <include
+        android:id="@+id/register_treaty_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar" />
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:padding="@dimen/_10px_in720p"
+            android:id="@+id/treaty_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" />
+    </ScrollView>
+
+</LinearLayout>

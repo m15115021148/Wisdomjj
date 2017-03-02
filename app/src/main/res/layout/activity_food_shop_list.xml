@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.sitemap.wisdomjingjiang.activities.RegisterPhoneActivity" >
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:background="@color/home_pager_title"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_20px_in720p"
+        android:paddingRight="@dimen/_20px_in720p" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_35px_in720p"
+            android:layout_height="@dimen/_35px_in720p"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_img" />
+        
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/iv_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:text="详情"
+            android:maxLength="10"
+            android:maxLines="1"            
+            android:textColor="@color/texthei"
+            android:textSize="@dimen/_36px_in720p" />
+
+       <LinearLayout
+            android:layout_marginLeft="@dimen/_60px_in720p"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:layout_height="@dimen/_60px_in720p"
+            android:layout_toRightOf="@+id/title"
+            android:background="@drawable/search_content_shape"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="@dimen/_10px_in720p" >
+
+            <EditText
+                android:id="@+id/search_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bghui"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="@dimen/_10px_in720p"
+                android:hint="@string/search_title"
+                android:inputType="text"
+                android:lines="1"
+                android:textSize="@dimen/_27px_in720p" />
+        </LinearLayout> 
+    </RelativeLayout>
+
+    <com.sitemap.wisdomjingjiang.views.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/refresh_head" />
+
+        <com.sitemap.wisdomjingjiang.views.PullableListView
+            android:id="@+id/foods_shop_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_20px_in720p"
+            android:scrollbars="none" />
+
+        <include layout="@layout/load_more" />
+    </com.sitemap.wisdomjingjiang.views.PullToRefreshLayout>
+
+</LinearLayout>

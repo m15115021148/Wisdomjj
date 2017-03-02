@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_20px_in720p" >
+
+    <TextView
+        android:id="@+id/province"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="false"
+        android:textColor="@color/text"
+        android:textSize="@dimen/_36px_in720p" />
+
+</LinearLayout>

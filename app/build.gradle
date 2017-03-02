@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    defaultConfig {
+        applicationId "com.sitemap.wisdomjingjiang"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    aaptOptions{
+        cruncherEnabled = false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files('libs/alipaySdk-20151215.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/fastjson-1.1.50.android.jar')
+    compile files('libs/httpmime-4.1.3.jar')
+    compile files('libs/jpush-android-2.1.5.jar')
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile files('libs/open_sdk_r5509.jar')
+    compile files('libs/SocialSDK_QQZone_3.jar')
+    compile files('libs/SocialSDK_WeiXin_1.jar')
+    compile files('libs/SocialSDK_WeiXin_2.jar')
+    compile files('libs/umeng-analytics-v5.6.4.jar')
+    compile files('libs/umeng_social_sdk.jar')
+    compile files('libs/xutils_3.3.34.jar')
+    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+}

@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_350px_in720p">
+
+    <FrameLayout
+        android:id="@+id/fl_image_cycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60px_in720p"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_indication_group"
+            android:layout_height="@dimen/_12px_in720p"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

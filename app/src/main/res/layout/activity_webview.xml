@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- webview布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/web_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:background="@color/blue" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="#0000"
+            android:gravity="center"
+            android:onClick="close"
+            android:text="关闭"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_31px_in720p" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="广告"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_36px_in720p" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/category_line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_2px_in720p"
+        android:background="#ffdddddd" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

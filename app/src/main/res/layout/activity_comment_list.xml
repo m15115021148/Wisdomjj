@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CommentListActivity" >
+
+    <include
+        android:id="@+id/comment_more_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        layout="@layout/include_back_bar"
+        />
+
+    <LinearLayout      
+        android:id="@+id/comment_show"
+        android:layout_width="match_parent"        
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:scrollbars="none"
+            android:id="@+id/comment_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+
+    </LinearLayout>
+    
+    <TextView
+        android:visibility="gone"
+        android:padding="@dimen/_20px_in720p"
+        android:gravity="center"
+        android:text="暂无评论"
+        android:id="@+id/comment_nono" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text"
+        android:textSize="@dimen/_36px_in720p"/>
+
+</LinearLayout>

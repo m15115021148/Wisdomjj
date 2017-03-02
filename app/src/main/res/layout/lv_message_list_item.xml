@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20px_in720p" >
+
+        <ImageView
+            android:id="@+id/message_img"
+            android:layout_width="@dimen/_150px_in720p"
+        	android:layout_height="@dimen/_110px_in720p"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/tops_bg_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:layout_toLeftOf="@+id/message_come"
+            android:layout_toRightOf="@+id/message_img"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/message_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_31px_in720p"
+                android:ellipsize="end"
+                android:textColor="@color/text"
+                android:maxLines="2"
+                android:text="Medium Text" />
+            
+            <TextView
+                android:layout_marginTop="@dimen/_10px_in720p"
+                android:id="@+id/message_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_27px_in720p"
+                android:textColor="@color/texthui"
+                android:ellipsize="end"
+                android:maxLines="1"
+                />
+            
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/message_come"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_xym" />
+    </RelativeLayout>
+
+</LinearLayout>

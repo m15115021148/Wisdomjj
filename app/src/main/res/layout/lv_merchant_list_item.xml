@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/_10px_in720p"
+    android:paddingTop="@dimen/_10px_in720p" >
+
+    <ImageView
+        android:id="@+id/merchant_list_icon"
+        android:layout_width="@dimen/_200px_in720p"
+        android:layout_height="@dimen/_160px_in720p"
+        android:layout_alignParentLeft="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/merchant_list_icon"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_toRightOf="@+id/merchant_list_icon" >
+
+        <TextView
+            android:id="@+id/merchant_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:layout_centerVertical="true"
+            android:text="焖鲜汇(桂林路店)"
+            android:textColor="@color/texthei"
+            android:textSize="@dimen/_36px_in720p"
+            android:layout_toLeftOf="@+id/merchant_list_distance"
+             />
+        <TextView
+            android:id="@+id/merchant_list_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="1.3km"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_31px_in720p" />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/l1"
+        android:layout_below="@+id/r1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_toRightOf="@+id/merchant_list_icon"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <RatingBar
+            android:id="@+id/merchant_list_lv"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:rating="4"
+            android:stepSize="1" />
+
+        <TextView
+            android:id="@+id/merchant_list_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:text="4.1分"
+            android:textColor="@color/home_pager_title"
+            android:textSize="@dimen/_31px_in720p" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/merchant_list_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_toRightOf="@+id/merchant_list_icon" >
+        
+        <TextView
+            android:id="@+id/merchant_list_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="高新科技开发园区东林路/范成璐附近"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/text"
+            android:lines="1"
+            android:singleLine="true"
+            android:textSize="@dimen/_31px_in720p" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 设置页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bghui"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:background="@color/home_pager_title"
+        android:padding="@dimen/_15px_in720p" >
+
+        <LinearLayout
+            android:id="@+id/base_back_lay"
+            android:layout_width="@dimen/_80px_in720p"
+            android:layout_height="@dimen/_80px_in720p"
+            android:layout_centerVertical="true"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/back_tv"
+                android:layout_width="@dimen/_20px_in720p"
+                android:layout_height="@dimen/_30px_in720p"
+                android:background="@drawable/back_index" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/set_title"
+            android:textSize="@dimen/_36px_in720p" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20px_in720p"
+        android:background="@color/user_xian" />
+
+    <RelativeLayout
+        android:id="@+id/set_change_psw"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120px_in720p"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:gravity="center_vertical"
+            android:text="@string/set_changepwd"
+            android:textColor="#333333"
+            android:textSize="@dimen/_31px_in720p" />
+
+        <ImageView
+            android:layout_width="@dimen/_20px_in720p"
+            android:layout_height="@dimen/_30px_in720p"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:background="@drawable/back_xym" />
+    </RelativeLayout>
+    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20px_in720p"
+        android:background="@color/bghui" />
+    
+    <RelativeLayout
+        android:id="@+id/set_about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120px_in720p"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:gravity="center_vertical"
+            android:text="关于"
+            android:textColor="#333333"
+            android:textSize="@dimen/_31px_in720p" />
+
+        <ImageView
+            android:layout_width="@dimen/_20px_in720p"
+            android:layout_height="@dimen/_30px_in720p"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:background="@drawable/back_xym" />
+    </RelativeLayout>
+    
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20px_in720p"
+        android:background="@color/bghui" />
+    
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120px_in720p"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:gravity="center_vertical"
+            android:text="@string/set_ismessage"
+            android:textColor="#333333"
+            android:textSize="@dimen/_31px_in720p" />
+
+        <CheckBox
+            android:id="@+id/ispush"
+            android:layout_width="@dimen/_100px_in720p"
+            android:layout_height="@dimen/_70px_in720p"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:background="@drawable/jpush_press_bg"
+            android:button="@null"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20px_in720p"
+        android:background="@color/user_xian" />
+    
+
+    <TextView
+        android:id="@+id/user_out_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_marginRight="@dimen/_20px_in720p"
+        android:layout_marginTop="@dimen/_60px_in720p"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/set_out"
+        android:textColor="@color/white" />
+
+</LinearLayout>

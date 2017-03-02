@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 评价页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bghui"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/ping_jia_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20px_in720p"
+        android:background="@color/bghui" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/_20px_in720p"
+        android:paddingTop="@dimen/_20px_in720p" >
+
+        <ImageView
+            android:id="@+id/comment_img"
+            android:layout_width="@dimen/_200px_in720p"
+            android:layout_height="@dimen/_200px_in720p"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:background="@drawable/tops_v_bg" />
+
+        <TextView
+            android:id="@+id/foods_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/comment_img"
+            android:layout_marginLeft="@dimen/_30px_in720p"
+            android:layout_marginTop="@dimen/_10px_in720p"
+            android:layout_toRightOf="@+id/comment_img"
+            android:lines="1"
+            android:text="评分:"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/foods_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/foods_store"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/foods_store"
+            android:lines="1"
+            android:text="4.1"
+            android:textColor="@color/home_pager_title"
+            android:textSize="@dimen/_36px_in720p"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/comment_img"
+            android:layout_alignLeft="@+id/foods_store"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RatingBar
+                android:id="@+id/foods_lv"
+                style="@style/my_rating_bar_style"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_65px_in720p"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:stepSize="1" />
+        </LinearLayout>
+
+        <!-- 评价商品的详细内容 -->
+
+        <TextView
+            android:id="@+id/comment_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/comment_img"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:layout_toRightOf="@+id/comment_img"
+            android:text="美食"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/is_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/comment_price"
+            android:layout_below="@+id/comment_shop_name"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:layout_toRightOf="@+id/comment_img"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="颜色："
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_36px_in720p" />
+
+            <TextView
+                android:id="@+id/comment_color"
+                android:layout_width="@dimen/_120px_in720p"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="红色fffffff"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_36px_in720p" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="尺寸："
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_36px_in720p" />
+
+            <TextView
+                android:id="@+id/comment_size"
+                android:layout_width="@dimen/_120px_in720p"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="333333333333333333"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_36px_in720p" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/comment_img"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:layout_toRightOf="@+id/comment_img"
+            android:text="￥44"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_36px_in720p" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1px_in720p"
+        android:background="@color/bghui" />
+
+    <EditText
+        android:id="@+id/comment_brief"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:enabled="true"
+        android:gravity="top"
+        android:hint="请发表评论"
+        android:inputType="textMultiLine"
+        android:maxLength="200"
+        android:minLines="6"
+        android:padding="@dimen/_20px_in720p"
+        android:textColor="@color/texthui"
+        android:textColorHint="#cccccc"
+        android:textSize="@dimen/_31px_in720p" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20px_in720p"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_20px_in720p" >
+
+        <CheckBox
+            android:id="@+id/comment_is_hide"
+            android:layout_width="@dimen/_35px_in720p"
+            android:layout_height="@dimen/_35px_in720p"
+            android:background="@drawable/shopping_cart_check_press"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:text="匿名评论"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_36px_in720p" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bghui"
+        android:gravity="bottom" >
+
+        <TextView
+            android:id="@+id/comment_sub"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100px_in720p"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="@string/pinglun_sub"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.sitemap.wisdomjingjiang.utils.NoScrollViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_120px_in720p" >
+        </com.sitemap.wisdomjingjiang.utils.NoScrollViewPager>
+
+        <LinearLayout
+            android:id="@+id/menu_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120px_in720p"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/home_pager"
+                style="@style/menu_style"
+                >
+
+                <ImageView
+                    android:id="@+id/home_pager_img"
+                    android:layout_width="@dimen/_50px_in720p"
+                    android:layout_height="@dimen/_50px_in720p"
+                    android:background="@drawable/menu_home_pager_bg"
+                    />
+
+                <TextView
+                    android:id="@+id/home_pager_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2px_in720p"
+                    android:text="@string/memu_page_home_name"
+                    android:textColor="@drawable/menu_text_color"
+                    android:textSize="@dimen/_27px_in720p" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/merchant"
+                style="@style/menu_style">
+
+                <ImageView
+                    android:id="@+id/merchant_img"
+                    android:layout_width="@dimen/_50px_in720p"
+                    android:layout_height="@dimen/_50px_in720p"
+                    android:background="@drawable/menu_merchant_bg"
+                    />
+
+                <TextView
+                    android:id="@+id/merchant_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2px_in720p"
+                    android:text="@string/menu_fen_lei"
+                    android:textColor="@drawable/menu_text_color"
+                    android:textSize="@dimen/_27px_in720p" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shopping_cart"
+                style="@style/menu_style">
+
+                <ImageView
+                    android:id="@+id/shopping_cart_img"
+                    android:layout_width="@dimen/_50px_in720p"
+                    android:layout_height="@dimen/_50px_in720p"
+                    android:background="@drawable/menu_shopping_cart_bg"
+                    />
+
+                <TextView
+                    android:id="@+id/shopping_cart_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2px_in720p"
+                    android:text="@string/menu_shopping_cart"
+                    android:textColor="@drawable/menu_text_color"
+                    android:textSize="@dimen/_27px_in720p" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_self"
+                style="@style/menu_style">
+
+                <ImageView
+                    android:id="@+id/my_self_img"
+                    android:layout_width="@dimen/_50px_in720p"
+                    android:layout_height="@dimen/_50px_in720p"
+                    android:background="@drawable/menu_my_self_bg"
+                    />
+
+                <TextView
+                    android:id="@+id/my_self_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2px_in720p"
+                    android:text="@string/menu_myself"
+                    android:textColor="@drawable/menu_text_color"
+                    android:textSize="@dimen/_27px_in720p" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

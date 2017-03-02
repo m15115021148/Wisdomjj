@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bghui"
+    android:orientation="vertical"
+    tools:context=".SubPayActivity" >
+
+    <LinearLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_20px_in720p"
+            android:text="请分开结算以下的商品"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <ListView
+            android:id="@+id/sub_pay_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+        </ListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200px_in720p" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sub_pay_close"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_below="@+id/r1"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="@dimen/_20px_in720p"
+        android:text="关闭"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36px_in720p" />
+
+</RelativeLayout>

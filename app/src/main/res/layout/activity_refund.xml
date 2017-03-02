@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 申请退款页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/refund_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginTop="@dimen/_20px_in720p"
+        android:background="@color/bghui"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_20px_in720p" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:gravity="center"
+            android:text="申请服务:"
+            android:textColor="@color/texthui"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30px_in720p"
+            android:gravity="center"
+            android:text="退款"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginTop="@dimen/_20px_in720p"
+        android:background="@color/bghui"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_20px_in720p" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:gravity="center"
+            android:text="退款原因:"
+            android:textColor="@color/texthui"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <Spinner
+            android:id="@+id/refund_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_5px_in720p"
+            android:prompt="@string/address_selected" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginTop="@dimen/_20px_in720p"
+        android:background="@color/bghui"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_20px_in720p" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:gravity="center"
+            android:text="退款金额:"
+            android:textColor="@color/texthui"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30px_in720p"
+            android:gravity="left|center_vertical"
+            android:text="￥ "
+            android:textColor="@color/red"
+            android:textSize="@dimen/_31px_in720p" />
+
+        <EditText
+            android:id="@+id/refund_money"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_31px_in720p" />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/li_express"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginTop="@dimen/_20px_in720p"
+        android:background="@color/bghui"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/_20px_in720p" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:gravity="center"
+            android:text="运费金额:"
+            android:textColor="@color/texthui"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30px_in720p"
+            android:gravity="left|center_vertical"
+            android:text="￥ "
+            android:textColor="@color/red"
+            android:textSize="@dimen/_31px_in720p" />
+
+        <EditText
+            android:id="@+id/refund_express"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_31px_in720p" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginTop="@dimen/_20px_in720p"
+        android:background="@color/bghui"
+        android:orientation="horizontal"
+        android:padding="@dimen/_20px_in720p" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:gravity="center"
+            android:text="申请说明:"
+            android:textColor="@color/texthui"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <EditText
+            android:id="@+id/refund_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:background="@color/bghui"
+            android:hint="最多200字"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_31px_in720p" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yijian_pic_lay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150px_in720p"
+        android:layout_marginTop="@dimen/_20px_in720p"
+        android:background="@drawable/login_shape"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/pic1"
+            android:layout_width="@dimen/_80px_in720p"
+            android:layout_height="@dimen/_80px_in720p"
+            android:layout_marginLeft="@dimen/_20px_in720p" />
+
+        <ImageView
+            android:id="@+id/pic2"
+            android:layout_width="@dimen/_80px_in720p"
+            android:layout_height="@dimen/_80px_in720p"
+            android:layout_marginLeft="@dimen/_20px_in720p" />
+
+        <ImageView
+            android:id="@+id/pic3"
+            android:layout_width="@dimen/_80px_in720p"
+            android:layout_height="@dimen/_80px_in720p"
+            android:layout_marginLeft="@dimen/_20px_in720p" />
+
+        <TextView
+            android:id="@+id/add_pic"
+            android:layout_width="@dimen/_80px_in720p"
+            android:layout_height="@dimen/_80px_in720p"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:background="@drawable/addpic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center" >
+
+        <TextView
+            android:id="@+id/refund_sub"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80px_in720p"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="@string/refund_sub"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

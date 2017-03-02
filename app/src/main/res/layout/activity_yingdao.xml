@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 引导页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+            android:id="@+id/viewpager_point"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+        
+       <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/ying_dao_bt"
+        android:gravity="center"
+        android:text="进 入 体 验"
+        android:visibility="gone"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/_36px_in720p" />
+
+    <LinearLayout
+        android:id="@+id/ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/ad_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:scaleType="fitXY"
+             android:onClick="onClick"
+             android:background="#0000"
+            tools:ignore="ContentDescription" />
+
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/ad_bottom"
+            tools:ignore="ContentDescription"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

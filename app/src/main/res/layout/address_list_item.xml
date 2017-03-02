@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20px_in720p" >
+
+        <TextView
+            android:id="@+id/address_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="索博" />
+
+        <TextView
+            android:id="@+id/address_user_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="13312345678" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/address_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:padding="@dimen/_20px_in720p"
+        android:text="上海市徐汇区桂平路418号402" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2px_in720p"
+        android:background="@color/bghui" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90px_in720p"
+        android:padding="@dimen/_20px_in720p" >
+
+        <CheckBox
+            android:id="@+id/address_is_default"
+            android:layout_width="@dimen/_40px_in720p"
+            android:layout_height="@dimen/_40px_in720p"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:focusable="false"
+            android:clickable="false"
+            android:enabled="false"
+            android:background="@drawable/shopping_cart_check_press"
+            android:button="@null"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/address_mo_wen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"           
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/address_is_default"
+            android:textColor="@color/text"
+            android:text="默认地址" />
+
+        <LinearLayout
+            android:id="@+id/address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/address_del"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="@dimen/_40px_in720p"
+                android:layout_height="@dimen/_40px_in720p"
+                android:background="@drawable/address_edit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10px_in720p"
+                android:text="编辑"
+                android:textSize="@dimen/_31px_in720p" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/address_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="@dimen/_40px_in720p"
+                android:layout_height="@dimen/_40px_in720p"
+                android:background="@drawable/address_delete" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10px_in720p"
+                android:text="删除"
+                android:textSize="@dimen/_31px_in720p" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10px_in720p"
+        android:background="@color/bghui" />
+
+</LinearLayout>

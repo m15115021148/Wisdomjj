@@ -1,0 +1,222 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+	android:background="@color/white"
+    tools:context=".AddressUpdateActivity" >
+
+    <include
+        android:id="@+id/address_update_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/include_back_bar" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_marginRight="@dimen/_20px_in720p"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_36px_in720p"
+            android:text="   收货人" />
+
+        <EditText
+            android:id="@+id/address_update_preson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:background="@color/white"
+            android:textColor="#333333"
+            android:textColorHint="#cccccc"
+            android:textSize="@dimen/_31px_in720p" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bghui" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_marginRight="@dimen/_20px_in720p"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:textSize="@dimen/_36px_in720p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address_phone" />
+
+        <EditText
+            android:id="@+id/address_update_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:layout_marginRight="@dimen/_60px_in720p"
+            android:layout_toRightOf="@+id/tv1"
+            android:background="@color/white"
+            android:inputType="phone"
+            android:textColor="#333333"
+            android:textColorHint="#cccccc"
+            android:textSize="@dimen/_31px_in720p" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bghui" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_marginRight="@dimen/_20px_in720p"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_36px_in720p"
+            android:text="@string/address_province" />
+
+        <Spinner
+            android:id="@+id/address_update_province"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100px_in720p"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:padding="@dimen/_5px_in720p"
+            android:prompt="@string/address_selected"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bghui" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_marginRight="@dimen/_20px_in720p"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_36px_in720p"
+            android:text="@string/address_city" />
+
+        <Spinner
+            android:id="@+id/address_update_city"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100px_in720p"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:padding="@dimen/_5px_in720p"
+            android:prompt="@string/address_selected"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bghui" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_marginRight="@dimen/_20px_in720p"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_36px_in720p"
+            android:text="@string/address_district" />
+
+        <Spinner
+            android:id="@+id/address_update_area"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100px_in720p"
+            android:layout_marginLeft="@dimen/_40px_in720p"
+            android:padding="@dimen/_5px_in720p"
+            android:prompt="@string/address_selected"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bghui" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_240px_in720p"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/address_update_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:enabled="true"
+            android:gravity="top"
+            android:hint="请填写详细地址"
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:minLines="8"
+            android:padding="@dimen/_20px_in720p"
+            android:textColor="#333333"
+            android:textColorHint="#cccccc"
+            android:textSize="@dimen/_31px_in720p" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bghui" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100px_in720p"
+        android:layout_marginLeft="@dimen/_20px_in720p"
+        android:layout_marginRight="@dimen/_20px_in720p"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:textSize="@dimen/_36px_in720p"
+            android:text="@string/address_set_default" />
+
+        <CheckBox
+            android:id="@+id/address_is_default"
+            android:layout_width="@dimen/_100px_in720p"
+            android:layout_height="@dimen/_70px_in720p"
+            android:button="@null"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:background="@drawable/jpush_press_bg"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/bghui" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:padding="@dimen/_20px_in720p">
+
+        <ImageView
+            android:id="@+id/search_img"
+            android:layout_width="@dimen/_35px_in720p"
+            android:layout_height="@dimen/_35px_in720p"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/search" />
+
+        <TextView
+            android:id="@+id/search_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/search_img"
+            android:layout_toLeftOf="@+id/search_result"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_31px_in720p"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:textColor="@color/texthui"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:text="牛奶棚" />
+
+        <TextView
+            android:id="@+id/search_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_27px_in720p"
+            android:textColor="@color/texthui"
+            android:text="约288个结果" />
+    </RelativeLayout>
+
+</LinearLayout>

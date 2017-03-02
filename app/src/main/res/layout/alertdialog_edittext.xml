@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 修改备注dialog样式 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_20px_in720p"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="修改昵称"
+        android:textSize="@dimen/_36px_in720p" />
+
+    <EditText
+        android:id="@+id/dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:hint="请输入（最多5个汉字）"
+        android:lines="1"
+        android:maxLength="5"
+        android:textColorHint="#dedede"
+        android:textColor="#333333"
+        android:textSize="@dimen/_31px_in720p" />
+
+</LinearLayout>

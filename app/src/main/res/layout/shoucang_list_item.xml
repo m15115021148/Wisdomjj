@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/_20px_in720p" >
+
+        <ImageView
+            android:id="@+id/collect_icon"
+            android:layout_width="@dimen/_200px_in720p"
+            android:layout_height="@dimen/_160px_in720p"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/collect_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/collect_icon"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/collect_icon"
+            android:maxLines="1"
+            android:text="首尔焖鲜汇(桂林路店)"
+             android:ellipsize="end" 
+             android:singleLine="true"
+            android:textColor="@color/text"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/_5px_in720p"
+            android:id="@+id/shop_mid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/l1"
+            android:layout_below="@+id/collect_store"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/collect_icon"
+            android:gravity="center_vertical" >
+
+            <RatingBar
+                android:id="@+id/collect_lv"
+                style="@style/my_grade_bar_style"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/collect_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20px_in720p"
+                android:layout_toRightOf="@+id/collect_lv"
+                android:text="4.1分"
+                android:visibility="gone"
+                android:textColor="@color/home_pager_title"
+                android:textSize="@dimen/_28px_in720p" />
+
+            <TextView
+                android:id="@+id/shop_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20px_in720p"
+               android:layout_alignParentRight="true"
+                android:gravity="right|center"
+                android:text="团购商家"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_28px_in720p" />
+        </RelativeLayout>
+
+     
+        <LinearLayout
+            android:id="@+id/goods_mid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/l2"
+            android:layout_below="@+id/collect_store"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/collect_icon"
+            android:gravity="right|center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+       >
+               <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20px_in720p"
+                android:layout_alignParentRight="true"
+                android:gravity="right|center"
+                android:text="商品"
+                android:textColor="@color/texthei"
+                android:textSize="@dimen/_28px_in720p" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/collect_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/collect_icon" >
+
+            <TextView
+                android:id="@+id/collect_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="蛋糕"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_31px_in720p" />
+
+            <TextView
+                android:id="@+id/collect_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20px_in720p"
+                android:layout_toLeftOf="@+id/collect_distance"
+                android:text="人民广场"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_31px_in720p" />
+
+            <TextView
+                android:id="@+id/collect_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="1.7km"
+                android:textColor="@color/text"
+                android:textSize="@dimen/_31px_in720p" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/l2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/collect_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/collect_icon"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/old_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="￥288"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_25px_in720p" />
+
+            <TextView
+                android:id="@+id/new_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_20px_in720p"
+                android:layout_toRightOf="@+id/old_price"
+                android:text="￥128"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/room_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="555"
+                android:textSize="@dimen/_27px_in720p" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

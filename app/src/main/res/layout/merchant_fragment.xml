@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 第二个子页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:background="@color/home_pager_title"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_20px_in720p"
+        android:paddingRight="@dimen/_20px_in720p" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_60px_in720p"
+            android:layout_weight="0.8"
+            android:background="@drawable/search_content_shape"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10px_in720p" >
+
+            <EditText
+                android:id="@+id/search_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/search"
+                android:drawablePadding="@dimen/_10px_in720p"
+                android:hint="输入商家、品类、商圈"
+                android:inputType="text"
+                android:lines="1"
+                android:textSize="@dimen/_27px_in720p" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="@dimen/_50px_in720p"
+            android:layout_height="@dimen/_50px_in720p"
+            android:layout_weight="0.1"
+            android:src="@drawable/message" />
+    </LinearLayout>
+
+    <!-- 主体内容 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ghui"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3" >
+
+            <ListView
+                android:id="@+id/merchant_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/merchant_right_fragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:orientation="vertical" >
+
+            
+        </LinearLayout>
+        
+    </LinearLayout>    
+
+</LinearLayout>

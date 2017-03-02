@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 地图标记样式 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/location_bg"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_15px_in720p" >
+
+    <TextView
+        android:id="@+id/location_address"
+        android:layout_width="@dimen/_560px_in720p"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10px_in720p"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/_20px_in720p"
+        android:paddingRight="@dimen/_20px_in720p"
+        android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        android:textColor="#333333"
+        android:textSize="@dimen/_36px_in720p" />
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/_10px_in720p"
+        android:paddingTop="@dimen/_10px_in720p" >
+
+        <ImageView
+            android:id="@+id/room_icon"
+            android:layout_width="@dimen/_190px_in720p"
+            android:layout_height="@dimen/_150px_in720p"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/_20px_in720p" />
+
+        <TextView
+            android:id="@+id/room_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/room_icon"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/room_icon"
+            android:lines="1"
+            android:text="房间名称"
+            android:textColor="@color/texthei"
+            android:textSize="@dimen/_36px_in720p" />
+
+        <TextView
+            android:id="@+id/news_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/l1"
+            android:layout_below="@+id/room_title"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/room_icon"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:text=""
+            android:textColor="@color/texthui"
+            android:textSize="@dimen/_27px_in720p" />
+
+        <RelativeLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/room_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20px_in720p"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:layout_toRightOf="@+id/room_icon" >
+
+            <TextView
+                android:id="@+id/old_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="￥288"
+                android:textColor="@color/texthui"
+                android:textSize="@dimen/_27px_in720p" />
+
+            <TextView
+                android:id="@+id/new_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_20px_in720p"
+                android:layout_toRightOf="@+id/old_price"
+                android:text="￥128"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/room_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="555"
+                android:textSize="@dimen/_27px_in720p" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

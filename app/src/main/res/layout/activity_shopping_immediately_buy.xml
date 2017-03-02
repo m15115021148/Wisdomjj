@@ -1,0 +1,256 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ShoppingImmediatelyBuyActivity" >
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shopping_desc_buy_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_20px_in720p" >
+
+            <ImageView
+                android:id="@+id/shopping_img"
+                android:layout_width="@dimen/_250px_in720p"
+                android:layout_height="@dimen/_210px_in720p"
+                android:layout_alignParentLeft="true" />
+
+            <!-- 商品 价格详情 -->
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_180px_in720p"
+                android:layout_alignBottom="@+id/shopping_img"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_20px_in720p"
+                android:layout_toRightOf="@+id/shopping_img"
+                android:padding="@dimen/_20px_in720p" >
+
+                <!-- 价格 -->
+
+                <LinearLayout
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shopping_flag"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_27px_in720p" />
+
+                    <TextView
+                        android:id="@+id/shopping_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10px_in720p"
+                        android:text="128"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_38px_in720p" />
+                </LinearLayout>
+
+                <!-- 库存 -->
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/l1"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_30px_in720p" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:text="@string/shopping_collect"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_31px_in720p" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/shopping_clear"
+                android:layout_width="@dimen/_50px_in720p"
+                android:layout_height="@dimen/_50px_in720p"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/r1"
+                android:layout_marginTop="@dimen/_30px_in720p"
+                android:src="@drawable/shopping_clear" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2px_in720p"
+            android:background="@color/mygray" />
+
+        <!-- 颜色分类 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10px_in720p" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10px_in720p"
+                android:text="@string/shopping_color"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_31px_in720p" />
+
+            <HorizontalScrollView
+                android:id="@+id/color_hsl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <RadioGroup
+                    android:id="@+id/colors"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10px_in720p" >
+                </RadioGroup>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2px_in720p"
+            android:background="@color/mygray" />
+
+        <!-- 尺码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10px_in720p" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10px_in720p"
+                android:text="@string/shopping_chicun"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_31px_in720p" />
+
+            <HorizontalScrollView
+                android:id="@+id/size_hsl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <RadioGroup
+                    android:id="@+id/sizes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10px_in720p" >
+                </RadioGroup>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2px_in720p"
+            android:background="@color/mygray" />
+
+        <!-- 数量 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120px_in720p"
+            android:padding="@dimen/_20px_in720p" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/food_desc_number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_36px_in720p" />
+
+            <TextView
+                android:id="@+id/shop_reduce"
+                style="@style/shopping_des_buy_tv_number"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/shop_number"
+                android:background="@drawable/number_reduce"
+                android:clickable="true"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/shop_number"
+                style="@style/shopping_des_buy_tv_number"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/shop_add"
+                android:background="@drawable/number_bg"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/texthei"
+                android:textSize="@dimen/_27px_in720p" />
+
+            <TextView
+                android:id="@+id/shop_add"
+                style="@style/shopping_des_buy_tv_number"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/number_add"
+                android:clickable="true"
+                android:onClick="onClick" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2px_in720p"
+            android:background="@color/mygray" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250px_in720p"
+            android:background="@color/white" />
+    </LinearLayout>
+
+    <!-- 确认 -->
+
+    <TextView
+        android:id="@+id/shopping_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/l2"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="@dimen/_30px_in720p"
+        android:text="@string/shopping_sure"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_36px_in720p" />
+
+</RelativeLayout>

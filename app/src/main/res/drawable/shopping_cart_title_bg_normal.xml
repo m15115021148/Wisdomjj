@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <corners android:radius="@dimen/_5px_in720p"
+        ></corners>
+    <solid android:color="@color/home_pager_title"></solid>
+	<padding android:left="@dimen/_10px_in720p" android:right="@dimen/_10px_in720p"></padding>
+	<stroke android:width="@dimen/_2px_in720p" android:color="@color/white"></stroke>
+</shape>

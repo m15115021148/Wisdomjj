@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:paddingBottom="@dimen/_5px_in720p"
+                android:paddingTop="@dimen/_5px_in720p"
+                android:id="@+id/foods_desc_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Large Text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_36px_in720p"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/foods_desc_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_5px_in720p"
+                android:paddingTop="@dimen/_5px_in720p"
+                android:text="徐汇区虹槽南路193号"
+                android:textColor="@color/huise"
+                android:textSize="@dimen/_31px_in720p" />
+
+            <RelativeLayout
+                android:paddingBottom="@dimen/_5px_in720p"
+                android:paddingTop="@dimen/_5px_in720p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/foods_desc_flag"
+                    android:layout_width="@dimen/_35px_in720p"
+                    android:layout_height="@dimen/_35px_in720p"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/foods_lv_1" />
+
+                <TextView
+                    android:id="@+id/foods_desc_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10px_in720p"
+                    android:layout_toRightOf="@+id/foods_desc_flag"
+                    android:text="834m"
+                    android:textColor="@color/huise"
+                    android:textSize="@dimen/_31px_in720p" />
+
+                <TextView
+                    android:id="@+id/foods_desc_jj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_15px_in720p"
+                    android:layout_toRightOf="@+id/foods_desc_distance"
+                    android:text="离我最近"
+                    android:textColor="@color/home_pager_title"
+                    android:textSize="@dimen/_31px_in720p" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l1_phone"
+            android:layout_width="@dimen/_150px_in720p"
+            android:layout_height="@dimen/_150px_in720p"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/foods_desc_phone"
+                android:layout_width="@dimen/_50px_in720p"
+                android:layout_height="@dimen/_50px_in720p"
+                android:src="@drawable/icon_gridveiw1" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

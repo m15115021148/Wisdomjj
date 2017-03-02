@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 第三个子页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80px_in720p"
+        android:background="@color/home_pager_title"
+        android:padding="@dimen/_15px_in720p" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/shopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_title"
+                android:textSize="@dimen/_36px_in720p" />
+
+            <TextView
+                android:id="@+id/food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_title"
+                android:textSize="@dimen/_36px_in720p" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/clean"
+            android:layout_width="@dimen/_50px_in720p"
+            android:layout_height="@dimen/_50px_in720p"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:layout_toLeftOf="@+id/iv_message"
+            android:src="@drawable/message" />
+
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="@dimen/_50px_in720p"
+            android:layout_height="@dimen/_50px_in720p"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_20px_in720p"
+            android:src="@drawable/message" />
+    </RelativeLayout>
+<LinearLayout 
+    android:id="@+id/shopping_list_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+                  android:layout_marginBottom="@dimen/_120px_in720p"
+        android:layout_marginTop="@dimen/_80px_in720p"
+        android:orientation="vertical"
+    >
+        <TextView 
+        android:layout_width="match_parent"
+    android:layout_height="@dimen/_10px_in720p"
+    android:background="#cccccc"/>
+    <ListView
+        android:id="@+id/shopping_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"  
+          android:dividerHeight="0dip"
+   >
+    </ListView>
+    <TextView 
+        android:layout_width="match_parent"
+    android:layout_height="@dimen/_10px_in720p"
+    android:background="#cccccc"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120px_in720p"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+        <LinearLayout 
+           android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="2.2" 
+        android:orientation="vertical"
+            >
+            <RelativeLayout 
+                  android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1.5" 
+                >
+                <TextView 
+                    android:layout_width="@dimen/_40px_in720p"
+                    android:layout_height="@dimen/_40px_in720p"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:background="#cccccc"
+                    android:layout_marginLeft="@dimen/_30px_in720p"
+                    />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="总计："
+                    android:gravity="center"
+                    android:layout_toLeftOf="@+id/shopping_money"
+                    android:layout_gravity="right|center"
+                    />
+                 <TextView 
+                     android:id="@+id/shopping_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="￥288.00"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_20px_in720p"
+                    />
+            </RelativeLayout>
+            <RelativeLayout 
+                  android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" 
+                >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="全选"
+                    android:gravity="center"
+                      android:layout_marginLeft="@dimen/_20px_in720p"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="不含运费"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_20px_in720p"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+           android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1" 
+        android:orientation="vertical"
+            >
+            <TextView 
+                 android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_20px_in720p"
+        android:text="@string/shopping_over"
+        android:background="#ef2f3f"
+        android:textColor="@color/white"
+        android:gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
